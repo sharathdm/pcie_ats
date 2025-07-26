@@ -1,0 +1,12 @@
+<p>1. driver programmed device to perform D2H DMA at address 0x0406_c004<br>
+<br>
+2. PCIe device generated ATS translation request for untranslated 0x0406_c000 ( 4K aligned adddess)<br>
+   IOMMU responds with completion packet with translated address 0x1_948F_FC03.<br>
+pkt no 885787<br>
+<br>
+use <a href="https://kernelnote.com/deep-dive-pcie-ats.html">https://kernelnote.com/deep-dive-pcie-ats.html</a> to understand the breakup of translated address <br>
+<br>
+3. PCIe device completed DMA transfer with translated address, pkt no 885871 <br>
+</p>
+
+<img src="translation req_resp.jpg" alt="Girl in a jacket" width="1200" height="900">
